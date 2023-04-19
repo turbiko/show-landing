@@ -12,9 +12,22 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from dotenv import load_dotenv
+from django.utils.translation import activate, gettext_lazy as _
+import logging
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
+
+
+try:
+    load_dotenv()
+    SECRET_KEY = os.getenv('SECRET_KEY')
+    if SECRET_KEY == None or SECRET_KEY == '':
+        SECRET_KEY = 'er%gjfgb;gklbnLIUG34tgfbgjfhj66yhgggfghfg%fhgfdfgd$#^%3453$%^#$%356%^$%REFGthgn'
+except KeyError:
+    print('ERROR: The SECRET_KEY environment variable is not set.')
+    SECRET_KEY = 'er%gjfgb;gklbnLIUG34tgfbgjfhj66yhgggfghfghfhgfdfgd$#^%3453$%^#$%356%^$%REFGthgn'
 
 
 # Quick-start development settings - unsuitable for production
@@ -45,11 +58,15 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    'menus.apps.MenusConfig',
 ]
 
 MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",
+    'django.middleware.cache.UpdateCacheMiddleware',  # https://gist.github.com/Speedy1991
     "django.middleware.common.CommonMiddleware",
+    'django.middleware.cache.FetchFromCacheMiddleware',  #  https://gist.github.com/Speedy1991
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
@@ -80,18 +97,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "core.wsgi.application"
 
-
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-    }
-}
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -114,7 +119,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "uk"
+
+LANGUAGES  = WAGTAILADMIN_PERMITTED_LANGUAGES = [
+    ('uk', _('Ukrainian')),
+    # ('en', _('English')),
+]
 
 TIME_ZONE = "UTC"
 
@@ -163,4 +173,67 @@ WAGTAILSEARCH_BACKENDS = {
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-WAGTAILADMIN_BASE_URL = "http://example.com"
+WAGTAILADMIN_BASE_URL = 'http://example.com'
+
+CSRF_TRUSTED_ORIGINS = [ 'http://example.com', ]
+
+# CSRF_COOKIE_DOMAIN = 'http://example.com'
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+
+EMAIL_HOST = 'mail.----'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'noreply@---'
+EMAIL_HOST_PASSWORD = '---'
+EMAIL_SUBJECT_PREFIX = '--- |'
+
+
+WAGTAILIMAGES_MAX_UPLOAD_SIZE = 15 * 1024 * 1024 * 1024  # first digit size in GB
+WAGTAILDOCS_SERVE_METHOD = 'redirect'  # need security check for pages  is_authentificated
+
+LOGGING = {
+    'version': 1,
+    # The version number of our log
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{name} {levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style':  '{',
+        },
+        'simple':  {
+            'format': '{levelname} {message}',
+            'style':  '{',
+        },
+    },
+    # django uses some of its own loggers for internal operations. In case you want to disable them just replace the False above with true.
+    # A handler for WARNING. It is basically writing the WARNING messages into a file called WARNING.log
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR + '/' + 'warning.log',
+            'formatter': 'verbose'
+        },
+    },
+    # A logger for WARNING which has a handler called 'file'. A logger can have multiple handler
+    'loggers': {
+        'project': {
+            'handlers':  ['file'],  # notice how file variable is called in handler which has been defined above
+            'level':     'INFO',
+            'propagate': True,
+            'formatter': 'verbose'
+        },
+       # notice the blank '', Usually you would put built in loggers like django or root here based on your needs
+        '': {
+            'handlers': ['file'], #notice how file variable is called in handler which has been defined above
+            'level': 'INFO',
+            'propagate': True,
+            'formatter': 'verbose'
+        },
+    },
+}
+
+FILE_UPLOAD_HANDLERS = ["django.core.files.uploadhandler.MemoryFileUploadHandler",
+                        "django.core.files.uploadhandler.TemporaryFileUploadHandler"]
