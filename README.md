@@ -1,29 +1,23 @@
 # show-landing project
 
-
+https://github.com/turbiko/show-landing
 
 tech stack:
 
-	backend framework: Django(Wagtail)
-    Python 3.10
-	frontend: HTML+CSS
-	DB: SQLite
-	Other: Docker, NGINX, Ubuntu LTS
+- backend framework: Django(Wagtail)
+- Python 3.10
+- frontend: HTML+CSS
+- DB: SQLite
+- Other recommended: Docker, NGINX, Ubuntu LTS
 
 Server config (my deployment recommendation):
 
  Hosted on Linux server (Ubuntu)
-- fresh version preffered
+- fresh version preferred
 - minimal installation.
 - python version 3.10 and up
 - installed docker
 - installed tmux (or any tool to avoid disconnection troubles)
-
-# Admin panel for stuff users and superusers:
-
-https://site.name.tld/admin # wagtail admin-panel
-
-https://site.name.tld/django-admin  # Django admin-panel
 
 # sometimes useful
 
@@ -53,5 +47,14 @@ https://site.name.tld/django-admin  # Django admin-panel
     or
     docker-compose exec web python manage.py createsuperuser --settings=core.settings.production
 
+# Admin panel for stuff users and superusers:
+
+https://site.name.tld/admin # wagtail admin-panel
+
+https://site.name.tld/django-admin  # Django admin-panel
+
+# database operstions
+
+    python manage.py inspectdb  # get db structure
 
 
