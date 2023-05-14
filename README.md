@@ -42,7 +42,10 @@ Server config (my deployment recommendation):
 
 # Docker
 
-    docker-compose up -d --build  or  docker-compose up  --build
+    docker-compose up -d --build  
+    or 
+    docker-compose up  --build
+
     docker-compose exec web python manage.py createsuperuser --settings=core.settings.dev
     or
     docker-compose exec web python manage.py createsuperuser --settings=core.settings.production
@@ -53,8 +56,8 @@ https://site.name.tld/admin # wagtail admin-panel
 
 https://site.name.tld/django-admin  # Django admin-panel
 
-# database operstions
+# database operations
 
-    python manage.py inspectdb  # get db structure
+    python manage.py inspectdb  # get db structure for connected database
 
 
