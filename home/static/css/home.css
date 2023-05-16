@@ -1,0 +1,1045 @@
+@import url(reset.css);
+@import url(fonts.css);
+/* bitter */
+@import url("https:/img/fonts.googleapis.com/css2?family=Bitter:wght@500;700&display=swap");
+
+.mavka-f {
+  font-family: "mavkafont";
+  font-style: normal;
+  font-weight: 400;
+}
+canvas {
+  filter: blur(1px);
+}
+body {
+  font-family: "Bitter", serif;
+  color: #ffffff;
+  background: #002c25;
+  max-width: 100vw;
+  min-width: 320px;
+}
+.top-logo-img {
+    width: 100%;
+    height: 100%;
+  }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: rgba(21, 20, 17, 0.8);
+  box-shadow: 0px 35px 35px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+}
+section {
+  width: 100vw;
+  height: auto;
+}
+.contacts {
+  width: fit-content;
+  margin: 10px auto;
+  font-family: "Bitter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 320px) {
+  body {
+    padding-top: 50px;
+  }
+  .wrapper {
+    background-image: url("/static/img/320/frame5.png");
+    background-size: cover; /* <------ */
+    background-repeat: no-repeat;
+    background-position: top;
+    margin-bottom: 30px;
+  }
+  .header {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .top-logo {
+    width: 110px;
+    height: 27px;
+    /*background-image: url("/static/img/320/logo.png");*/
+    background-repeat: no-repeat;
+  }
+  .social-top {
+    display: none;
+  }
+  .buy-button {
+    width: auto;
+    height: auto;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  .mavka-f {
+  }
+  .button {
+    width: 100%;
+    height: 100%;
+    background-color: #ffcd00;
+    color: #000304;
+    box-shadow: 0px 1px 1px #67a595, 0px 3px 3px #3f0a00;
+    text-shadow: 0px 1px 2px #3f0a00;
+    text-align: center;
+    border-radius: 40px;
+    margin: 0 2px;
+  }
+  .button span {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 5px;
+  }
+  .frame1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .fly-block1 {
+    width: 180px;
+    height: 346.84px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .logo-square {
+    width: 180px;
+    height: 249.36px;
+    background-image: url("/static/img/320/mavka-show.png");
+    background-size: cover;
+  }
+  .hr100 {
+    border-top: 1px solid #b0b0b0;
+    width: 100%;
+    margin: 10px auto 0 auto;
+  }
+  .tour-text {
+    margin: 0 auto;
+  }
+  .fly-block2 {
+    margin: 0 0;
+    background-image: url("/static/img/320/image30.png");
+    height: 106.8vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .block3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 30px;
+    margin: 20px auto;
+  }
+  .block3 p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 13px;
+    line-height: 30px;
+    letter-spacing: 0.25em;
+    color: #ffffff;
+  }
+
+  .sheduler {
+    display: flex;
+    flex-direction: column;
+  }
+  .sheduler div span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .sheduler-title {
+    font-size: 30px;
+    line-height: 39px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    background-clip: text;
+    text-shadow: 0px 2px 1px #67a595, 0px 5px 3px #3f0a00;
+    background: linear-gradient(
+      180deg,
+      #e2dfd2 23.85%,
+      #bf7f50 47.82%,
+      #6b3817 73.85%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 20px auto;
+  }
+  .sheduler-text {
+    margin: 0 auto;
+  }
+  .sheduler-text span {
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+  .sheduler-adv {
+    width: 220px;
+    height: 44px;
+    background: url("/static/img/320/nplogo.svg");
+    background-size: 220px 44px;
+    margin: 20px auto;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+  .events-chart {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 90px auto;
+  }
+  .sheduler-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+    text-transform: uppercase;
+    margin: 10px;
+    width: fit-content;
+  }
+  .event-date {
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .event-title {
+    font-size: 20px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .buy-ticket {
+    font-size: 30px;
+    line-height: 39px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.25em;
+  }
+  .buy-ticket span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-transform: uppercase;
+    background: linear-gradient(
+      180deg,
+      #e2dfd2 23.85%,
+      #bf7f50 47.82%,
+      #6b3817 73.85%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0px 2px 1px #67a595, 0px 5px 3px #3f0a00;
+  }
+  .description {
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 35px;
+    letter-spacing: 0.02em;
+    margin: 0 auto;
+    width: 95vw;
+  }
+  .card {
+    font-size: 15px;
+    line-height: 20px;
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: rgba(21, 20, 17, 0.8);
+    border-radius: 15px;
+  }
+  .buy-with-card {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: 20px;
+    align-items: center;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin: 0 auto;
+  }
+  .buy-with-card span {
+    background: linear-gradient(
+        180deg,
+        #e2dfd2 23.85%,
+        #bf7f50 47.82%,
+        #6b3817 73.85%
+      ),
+      #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  .buy-with-card * {
+    margin: 0 auto;
+  }
+  .card-logo {
+    margin: 20px auto;
+  }
+  .card-logo img {
+    width: 100%;
+    height: 100%;
+  }
+  .buy-button2 {
+    width: 259px;
+    height: 39.38px;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-feature-settings: "salt" on;
+    color: #000304;
+    text-shadow: 0px 1.51462px 3.02924px #3f0a00;
+  }
+  .button2 {
+    width: 100%;
+    height: 100%;
+    margin: 10px auto;
+    background-color: #ffcd00;
+    color: #000304;
+    box-shadow: 0px 1px 1px #67a595, 0px 3px 3px #3f0a00;
+    border-radius: 40px;
+    text-shadow: 0px 1px 2px #3f0a00;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 19.7px;
+    line-height: 26px;
+  }
+  .buy-button2 span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .facts {
+    margin: 25px auto;
+  }
+  .facts-title {
+    font-size: 30px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    letter-spacing: 0.14em;
+    margin: 30px auto;
+  }
+  .facts-title span {
+    text-transform: uppercase;
+    background: linear-gradient(
+        180deg,
+        #e2dfd2 23.85%,
+        #bf7f50 47.82%,
+        #6b3817 73.85%
+      ),
+      #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0px 2px 1px #67a595, 0px 5px 3px #3f0a00;
+  }
+  .facts-block {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .facts-list {
+    list-style-type: disc;
+    margin-left: 15px;
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 35px;
+    letter-spacing: 0.02em;
+  }
+  .footer-line {
+    margin: 40px auto;
+  }
+  footer {
+    height: 100px;
+    width: 100%;
+  }
+  .social-footer {
+    height: 36px;
+    width: 224px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px auto;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .block3 {
+    line-height: 30px;
+    width: 75vw;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 630px) {
+  .buy-with-card {
+    width: 98vw;
+    height: 94px;
+    flex-direction: row;
+  }
+  .social-top {
+    height: 27px;
+    width: 178px;
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .social-top a img {
+    height: 27px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    background-image: url("/static/img/768/frame5.png");
+  }
+  .header {
+    padding: 5px 20px;
+  }
+  .top-logo {
+    width: 152px;
+    height: 37px;
+    /*background-image: url("/static/img/768/logo.png");*/
+  }
+  .social-top {
+    height: 27px;
+    width: 178px;
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .social-top a img {
+    height: 27px;
+  }
+  .buy-button {
+  }
+  .mavka-f {
+  }
+  .button {
+  }
+  .frame1 {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .fly-block1 {
+    width: 219.76px;
+    height: 423.37px;
+    margin: 0 20px;
+  }
+  .logo-square {
+    width: 219.76px;
+    height: 304.45px;
+    background-image: url("/static/img/768/mavka-show.png");
+    background-size: cover;
+  }
+  .hr100 {
+  }
+  .tour-text {
+  }
+  .fly-block2 {
+    height: 448px;
+    width: 448px;
+    background-image: url("/static/img/768/image30.png");
+    background-repeat: no-repeat;
+    background-size: 448px 680px;
+  }
+  .block3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-size: 2.083vw; /* 16px*/
+    line-height: 3.906vw;
+    width: 75vw;
+    margin: 0 auto;
+  }
+
+  .sheduler {
+  }
+  .sheduler-title {
+    font-size: 50px;
+    line-height: 65px;
+  }
+  .sheduler-text {
+  }
+  .sheduler-text span {
+    font-size: 39px;
+    line-height: 47px;
+  }
+  .sheduler-adv {
+    background: url("/static/img/320/nplogo.svg");
+    background-size: 53vw 10.5vw;
+    width: 53vw;
+    height: 10.5vw;
+    background-size: 100%;
+  }
+  .sheduler-line {
+  }
+  .event-date {
+    font-size: 35px;
+    line-height: 42px;
+  }
+  .event-title {
+    font-size: 36px;
+    line-height: 47px;
+  }
+  .buy-ticket {
+    font-size: 50px;
+    line-height: 65px;
+
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .description {
+    width: 75vw;
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .card {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .buy-with-card {
+    width: 725px;
+    height: 94px;
+    flex-direction: row;
+  }
+  .card-logo {
+  }
+  .buy-button2 {
+    width: 392px;
+    height: 70px;
+  }
+  .button2 {
+    font-size: 35px;
+    line-height: 46px;
+  }
+  .facts {
+  }
+  .facts-title {
+    font-size: 50px;
+    line-height: 65px;
+  }
+  .facts-block {
+    width: 75vw;
+  }
+  .facts-list {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .footer-line {
+  }
+  .social-footer {
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .wrapper {
+    background-image: url("/static/img/1024/frame5.png");
+  }
+  .header {
+  }
+  .top-logo {
+    /*background-image: url("/static/img/1024/logo.png");*/
+  }
+  .social-top {
+  }
+  .buy-button {
+  }
+  .mavka-f {
+  }
+  .button {
+  }
+  .frame1 {
+    height: 700px;
+  }
+  .fly-block1 {
+    width: 219.76px;
+    height: 423.37px;
+  }
+  .logo-square {
+    width: 219.76px;
+    height: 304.45px;
+    background-image: url("/static/img/1024/mavka-show.png");
+    background-size: cover;
+  }
+  .hr100 {
+  }
+  .tour-text {
+  }
+  .fly-block2 {
+    height: 950px;
+    width: 626px;
+    background-image: url("/static/img/1024/image30.png");
+    background-repeat: no-repeat;
+    background-size: 626px 950px;
+  }
+  .block3 {
+    width: 75vw;
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .sheduler {
+  }
+  .sheduler-title {
+    font-size: 60px;
+    line-height: 78px;
+  }
+  .sheduler-text {
+  }
+  .sheduler-text span {
+    font-size: 39px;
+    line-height: 47px;
+  }
+  .sheduler-adv {
+    width: 405px;
+    height: 80px;
+    background: url("/static/img/320/nplogo.svg");
+    background-size: 405px 80px;
+  }
+  .events-chart {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 90px auto;
+  }
+  .sheduler-line {
+  }
+  .event-date {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .event-title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .buy-ticket {
+    font-size: 60px;
+    line-height: 78px;
+    width: 85vw;
+  }
+  .description {
+    width: 74vw;
+  }
+  .card {
+    font-size: 17px;
+    line-height: 22px;
+  }
+  .buy-with-card {
+    width: 865px;
+    height: 112.34px;
+  }
+  .card-logo {
+  }
+  .buy-button2 {
+  }
+  .button2 {
+    font-size: 35px;
+    line-height: 46px;
+  }
+  .facts {
+  }
+  .facts-title {
+    font-size: 60px;
+    line-height: 78px;
+  }
+  .facts-block {
+    width: 76vw;
+  }
+  .facts-list {
+  }
+  .footer-line {
+  }
+  .social-footer {
+  }
+}
+
+@media only screen and (min-width: 1336px) {
+  .wrapper {
+    background-image: url("/static/img/1366/frame5.png");
+  }
+  .header {
+  }
+  .top-logo {
+    /*background-image: url("/static/img/1366/logo.png");*/
+  }
+  .social-top {
+  }
+  .buy-button {
+  }
+  .mavka-f {
+  }
+  .button {
+  }
+  .frame1 {
+    height: 800px;
+  }
+  .fly-block1 {
+    width: 276px;
+    height: 531px;
+  }
+  .logo-square {
+    width: 276.11px;
+    height: 382.51px;
+    background-image: url("/static/img/1366/mavka-show.png");
+    background-size: cover;
+  }
+  .hr100 {
+  }
+  .tour-text {
+  }
+  .fly-block2 {
+    height: 1024.9px;
+    width: 675px;
+    background-image: url("/static/img/1366/image30.png");
+    background-repeat: no-repeat;
+  }
+  .block3 {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .sheduler {
+  }
+  .sheduler-title {
+    font-size: 70px;
+    line-height: 91px;
+  }
+  .sheduler-text {
+  }
+  .sheduler-adv {
+  }
+  .events-chart {
+  }
+  .sheduler-line {
+  }
+  .event-date {
+  }
+  .event-title {
+  }
+  .buy-ticket {
+    font-size: 70px;
+    line-height: 91px;
+  }
+  .description {
+    width: 56vw;
+  }
+  .card {
+    font-size: 21px;
+    line-height: 27px;
+  }
+  .buy-with-card {
+    width: 1015px;
+    height: 131.82px;
+  }
+  .card-logo {
+  }
+  .buy-button2 {
+  }
+  .button2 {
+    font-size: 35px;
+    line-height: 46px;
+  }
+  .facts {
+  }
+  .facts-title {
+    font-size: 70px;
+    line-height: 91px;
+  }
+  .facts-block {
+    width: 58vw;
+  }
+  .facts-list {
+  }
+  .footer-line {
+  }
+  .social-footer {
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  body {
+    padding-top: 100px;
+  }
+  .wrapper {
+    background-image: url("/static/img/1600/frame5.png");
+  }
+  .header {
+    height: 100px;
+  }
+  .top-logo {
+    width: 252px;
+    height: 60px;
+    /*background-image: url("/static/img/1600/logo.png");*/
+  }
+  .social-top {
+  }
+  .buy-button {
+  }
+  .mavka-f {
+  }
+  .button {
+  }
+  .frame1 {
+  }
+  .fly-block1 {
+    width: 314px;
+    height: 605px;
+  }
+  .logo-square {
+    width: 314px;
+    height: 435px;
+    background-image: url("/static/img/1600/mavka-show.png");
+    background-size: cover;
+  }
+  .hr100 {
+  }
+  .tour-text {
+  }
+  .fly-block2 {
+    height: 1026.8px;
+    width: 676.23px;
+    background-image: url("/static/img/1600/image30.png");
+    background-repeat: no-repeat;
+    background-size: 676.23px 1026.8px;
+  }
+  .block3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .sheduler {
+  }
+  .sheduler-title {
+    font-size: 80px;
+    line-height: 104px;
+  }
+  .sheduler-text {
+  }
+  .sheduler-adv {
+  }
+  .events-chart {
+  }
+  .events-chart {
+  }
+  .sheduler-line {
+  }
+  .event-date {
+    margin-left: 0;
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .event-title {
+    font-size: 28px;
+    line-height: 37px;
+  }
+  .buy-ticket {
+    font-size: 80px;
+    line-height: 104px;
+  }
+  .description {
+    width: 53vw;
+  }
+  .card {
+    font-size: 23px;
+    line-height: 30px;
+  }
+  .buy-with-card {
+    width: 1155px;
+    height: 150px;
+  }
+  .card-logo {
+  }
+  .buy-button2 {
+  }
+  .button2 {
+    font-size: 35px;
+    line-height: 46px;
+  }
+  .facts {
+  }
+  .facts-title {
+    font-size: 80px;
+    line-height: 104px;
+  }
+  .facts-block {
+    width: 55vw;
+  }
+  .facts-list {
+  }
+  .footer-line {
+  }
+  .social-footer {
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .wrapper {
+    background-image: url("/static/img/1920/frame5.png");
+  }
+  .header {
+  }
+  .top-logo {
+    width: 263px;
+    height: 60px;
+    /*background-image: url("/static/img/1920/logo.png");*/
+  }
+  .social-top {
+  }
+  .buy-button {
+  }
+  .mavka-f {
+  }
+  .button {
+  }
+  .frame1 {
+    height: 950px;
+  }
+  .fly-block1 {
+  }
+  .logo-square {
+    width: 314px;
+    height: 435px;
+    background-image: url("/static/img/1920/mavka-show.png");
+    background-size: cover;
+  }
+  .hr100 {
+  }
+  .tour-text {
+  }
+  .fly-block2 {
+    height: 1280px;
+    width: 843px;
+    background-image: url("/static/img/1600/image30.png");
+    background-repeat: no-repeat;
+    background-size: 843px 1280px;
+  }
+  .block3 {
+  }
+  .sheduler {
+  }
+  .sheduler-title {
+    font-size: 100px;
+    line-height: 130px;
+    margin: 58px auto;
+  }
+  .sheduler-text {
+  }
+  .sheduler-adv {
+  }
+  .events-chart {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 90px auto;
+  }
+  .sheduler-line {
+    width: fit-content;
+  }
+  .event-date {
+    font-size: 35px;
+    line-height: 42px;
+  }
+  .event-title {
+    font-size: 36px;
+    line-height: 47px;
+  }
+  .buy-ticket {
+    font-size: 100px;
+    line-height: 130px;
+    background-image: url("/static/img/1920/image29.png");
+    overflow: visible;
+    z-index: 11;
+  }
+  .description {
+    width: 44vw;
+  }
+  .card {
+    font-size: 28px;
+    line-height: 37px;
+  }
+  .buy-with-card {
+    width: 1350px;
+    height: 150px;
+  }
+  .card-logo {
+  }
+  .buy-button2 {
+  }
+  .button2 {
+  }
+  .facts {
+  }
+  .facts-title {
+    font-size: 100px;
+    line-height: 130px;
+  }
+  .facts-block {
+    width: 46vw;
+  }
+  .facts-list {
+  }
+  .footer-line {
+  }
+  .social-footer {
+  }
+}

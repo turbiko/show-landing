@@ -1,25 +1,108 @@
 {% extends "base.html" %}
-{% load static wagtailcore_tags%}
+{% load static wagtailcore_tags wagtailimages_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
 {% block extra_css %}
+<style>
+
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 {% endblock extra_css %}
 
 {% block content %}
-<div class="wrapper-menu"> {# wrapper-menu #}
-    {# include 'home/main_menu.html' #}
-</div> {# wrapper-menu #}
-<div class="wrapper">
-    <main class="wrapper_content"> {# main wrapper_content #}
-        <div class="block_projects">
-            {% for block in page.event_block %}
-            {% include_block block %} 1
-            {% endfor %}
-        </div>
-    </main>
-</div>{# wrapper #}
+    {# firefly dots #}
+    <div class="firefly"></div>  <div class="firefly"></div>
+    <div class="firefly"></div>  <div class="firefly"></div>
+    <div class="firefly"></div>  <div class="firefly"></div>
+    <div class="firefly"></div>  <div class="firefly"></div>
+    <div class="firefly"></div>  <div class="firefly"></div>
+    {# end of firefly dots #}
 
+    <div class="wrapper">
+        <section class="header">
+
+            <div class="top-logo">
+                {% image page.logo_image original as mavka_logo %}
+                <img class="top-logo-img" src="{{mavka_logo.url}}">
+            </div>
+
+            <div class="social-top">
+                <a href="{{ settings.home.SiteSpecificSocialMediaSettings.facebook }}"><img src="/static/img/facebook.png"/></a>
+
+                <a href="{{ settings.home.SiteSpecificSocialMediaSettings.instagram }}"><img src="/static/img/insta.png"/></a>
+
+            </div>
+
+            <div class="buy-button mavka-f">
+                <a class="button " href="https://fca.ua/majbutni-podiyi/?_sfm_year_select=2023&_sft_post_tag=mavka-shou"><span>купити квиток</span></a>
+            </div>
+        </section>
+        <section class="frame1">
+            <div class="fly-block1">
+                <div class="logo-square">
+
+                </div>
+                <div><hr class="hr100"></div>
+                <div class="tour-text">
+                    <img src="/static/img/tour_ua.png" />
+                </div>
+            </div>
+            <div class="fly-block2"></div>
+        </section>
+        <section>
+            <div class="block3 mavka-f">
+                <p>ексклюзивно за мотивами
+                анімаційного фільму
+                "мавка. лісова пісня"</p>
+            </div>
+        </section>
+        <section class="sheduler">
+            {% for block in page.event_block %}
+            {% include_block block %}
+            {% endfor %}
+        </section>
+        <section class="buy-ticket mavka-f">
+            <span>придбати </span><span> квиток</span>
+        </section>
+        <section class="description">
+            <p>{{self.show_text}}</p>
+        </section>
+        <section class=" mavka-f">
+            <div class="card buy-with-card">
+                <span>купуйте квитки з карткою</span>
+                <div class="card-logo">
+                    <img src="/static/img/card_logo.png">
+                </div>
+                <span>отримуйте 10% знижки</span>
+            </div>
+            <div class="buy-button2">
+                <a class="button2" href="https://fca.ua/majbutni-podiyi/?_sfm_year_select=2023&_sft_post_tag=mavka-shou">
+                    <span>купити квиток</span>
+                </a>
+            </div>
+        </section>
+        <section class="facts">
+            {% for block in page.facts_block %}
+            {% include_block block %}
+            {% endfor %}
+            <hr class="hr100 footer-line">
+        </section>
+        <footer>
+            <div class="social-footer">
+                <a href="https://www.facebook.com/mavka.show"><img src="/static/img/facebook.png"/></a>
+
+                <a href="https://instagram.com/mavka.show"><img src="/static/img/insta.png"/></a>
+
+            </div>
+            <div class="contacts">
+                <p>Звʼязок з організаторами: <a href="mailto:info@stageshow.com.ua?subject=Мавка.Шоу.">info@stageshow.com.ua</a></p>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="/js/script.js"></script>
 
 {% endblock content %}

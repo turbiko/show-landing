@@ -1,10 +1,24 @@
 {% load  static wagtailcore_tags %}
-            <div class="block__projects_pics">
-                            {{self.title_events}}
+
+            <div class="sheduler-title mavka-f">
+                <span>{{self.title_events}}</span>
             </div>
+            <div class="sheduler-text">
+                <span>{{self.title_text1}}</span>
+            </div>
+            <div style="margin-left:auto; margin-right: auto;">
+                <div class="sheduler-adv"></div>
+                <div class="sheduler-text">
+                    <span>{{self.title_text2}}</span>
+                </div>
+                <div class="events-chart">
  {% for card in self.event_card %}
-                    <div class="block__projects_text">
-                        <h3>{{card.text}}</h3> <br>
-                        <p>{{card.description}}</p><br>
+                    <div class="sheduler-line">
+                        <div class="event-date">{{card.date}}  </div>
+                        <div class="event-title">
+                            {{card.title}}
+                        </div>
                     </div>
 {%endfor%}
+                </div>
+            </div>

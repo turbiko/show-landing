@@ -1,0 +1,17 @@
+{% load  static wagtailcore_tags %}
+
+            <div class="facts-title mavka-f">
+
+                <span>{{self.title_facts1}}</span>
+                <span>{{self.title_facts2}}</span>
+            </div>
+            <div class="facts-block">
+                <ul  class="facts-list">
+                    {% for card in self.fact_card %}
+                    <li>
+                        {{card.text}}
+                    </li>
+                    {%endfor%}
+
+                </ul>
+            </div>
