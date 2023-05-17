@@ -1,0 +1,28 @@
+@font-face {
+    font-family: mavkafont;
+    src:url("../font/mavka.otf");
+}
+@font-face {
+    font-family: novapostablack;
+    src:url("../font/NovaPoshta-Black.otf");
+}
+@font-face {
+    font-family: novapostabold;
+    src:url("../font/NovaPoshta-Bold.otf");
+}
+@font-face {
+    font-family: novapostaitalic;
+    src:url("../font/NovaPoshta-Italic.otf");
+}
+@font-face {
+    font-family: novapostamedium;
+    src:url("../font/NovaPoshta-Medium.otf");
+}
+@font-face {
+    font-family: novapostaregular;
+    src:url("../font/NovaPoshta-Regular.otf");
+}
+@font-face {
+    font-family: novapostaregcond;
+    src:url("../font/NovaPoshta-RegularCond.otf");
+}
