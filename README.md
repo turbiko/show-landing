@@ -60,4 +60,11 @@ https://site.name.tld/django-admin  # Django admin-panel
 
     python manage.py inspectdb  # get db structure for connected database
 
+## Check if ports free for Linux for modyfy docker-compose nginx ports settings - "8082:8081" 8082 container external port
+sudo lsof -i -P -n | grep LISTEN
+sudo netstat -tulpn | grep LISTEN
+sudo ss -tulpn | grep LISTEN
+sudo lsof -i:22 ## see a specific port such as 22 ##
+sudo nmap -sTU -O IP-address-Here
+
 
