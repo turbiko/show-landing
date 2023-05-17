@@ -46,9 +46,9 @@ Server config (my deployment recommendation):
     or 
     docker-compose up  --build
 
-    docker-compose exec web python manage.py createsuperuser --settings=core.settings.dev
+    docker-compose exec landing python manage.py createsuperuser --settings=core.settings.dev
     or
-    docker-compose exec web python manage.py createsuperuser --settings=core.settings.production
+    docker-compose exec landing python manage.py createsuperuser --settings=core.settings.production
 
 # Admin panel for stuff users and superusers:
 
