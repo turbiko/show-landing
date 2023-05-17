@@ -10,7 +10,7 @@ services:
     volumes:
       - .:/app
     expose:
-      - 8082
+      - 8080
     env_file:
       - env/app.env
       - env/database.env
