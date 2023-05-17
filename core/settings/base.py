@@ -175,13 +175,8 @@ WAGTAILSEARCH_BACKENDS = {
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-WAGTAILADMIN_BASE_URL = 'http://example.com'
 
-CSRF_TRUSTED_ORIGINS = [ 'http://example.com', ]
 
-# CSRF_COOKIE_DOMAIN = 'http://example.com'
-
-CORS_ORIGIN_ALLOW_ALL = True
 
 
 EMAIL_HOST = 'mail.----'
@@ -199,6 +194,15 @@ CORS_ALLOWED_ORIGINS =[
     'https://mavka.argentum.ua',
     'https://show.mavka.ua',
 ]
+
+WAGTAILADMIN_BASE_URL = "http://mavka.argentum.ua"
+
+CSRF_TRUSTED_ORIGINS = [ 'https://mavka.argentum.ua', ]
+
+# CSRF_COOKIE_DOMAIN = 'http://example.com'
+
+CORS_ORIGIN_ALLOW_ALL = True
+
 LOGGING = {
     'version': 1,
     # The version number of our log
