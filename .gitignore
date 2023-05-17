@@ -10,7 +10,7 @@ __pycache__/
 local_settings.py
 db.sqlite3
 media
-static
+/static
 ### Linux ###
 *~
 
@@ -125,7 +125,9 @@ fabric.properties
 
 # Distribution / packaging
 .Python
-env/
+#env/
+app.env
+database.env
 build/
 develop-eggs/
 dist/
@@ -199,7 +201,7 @@ celerybeat-schedule
 # virtualenv
 .venv
 venv/
-ENV/
+#ENV/
 
 # Spyder project settings
 .spyderproject
