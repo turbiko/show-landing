@@ -1,7 +1,7 @@
 version: "3.7"
 
 services:
-  landing1:
+  mavkaapp:
     build:
       context: .
       dockerfile: Dockerfile
@@ -11,14 +11,14 @@ services:
       - .:/app
     expose:
       - 8080
-    env_file:
-      - env/app.env
-      - env/database.env
+#    env_file:
+#      - env/app.env
+#      - env/database.env
 
 
   nginx:
     image: library/nginx:latest
-    container_name: docker-django-nginx
+    container_name: docker-mavka-nginx
     ports:
       - "8082:8081"
     volumes:
@@ -27,4 +27,4 @@ services:
       - ./static:/static
       - ./media:/media
     depends_on:
-      - landing1
+      - mavkaapp
