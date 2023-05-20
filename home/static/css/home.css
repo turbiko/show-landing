@@ -475,6 +475,7 @@ section {
     height: 27px;
   }
   .buy-button {
+    width: 171px;
   }
   .mavka-f {
   }
@@ -607,6 +608,9 @@ section {
     /*background-image: url("/static/img/1024/logo.png");*/
   }
   .social-top {
+  }
+  .social-top a img {
+    height: 32px;
   }
   .buy-button {
   }
@@ -837,7 +841,11 @@ section {
   }
   .social-top {
   }
+  .social-top a img {
+    height: 36px;
+  }
   .buy-button {
+    width: 202px;
   }
   .mavka-f {
   }
