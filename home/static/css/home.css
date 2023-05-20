@@ -289,7 +289,9 @@ section {
     line-height: 20px;
     width: 300px;
     height: 200px;
+    border: 1px solid #AE7551;
     border-radius: 15px;
+
     padding-top: 35px;
     padding-bottom: 35px;
     background-color: rgba(21, 20, 17, 0.8);
@@ -303,7 +305,7 @@ section {
     align-items: center;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    margin: 0 auto;
+    margin: 20px auto;
   }
   .buy-with-card span {
     background: linear-gradient(
@@ -395,6 +397,7 @@ section {
   .facts-block {
     width: 100%;
     margin: 0 auto;
+    padding: 2vw;
   }
   .facts-list {
     list-style-type: disc;
