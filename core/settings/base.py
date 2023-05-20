@@ -179,8 +179,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 
 
-
-
 EMAIL_HOST = 'mail.----'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
@@ -201,7 +199,7 @@ WAGTAILADMIN_BASE_URL = "http://mavka.argentum.ua"
 
 CSRF_TRUSTED_ORIGINS = [ 'https://mavka.argentum.ua', ]
 
-# CSRF_COOKIE_DOMAIN = 'http://example.com'
+# CSRF_COOKIE_DOMAIN = 'https://mavka.argentum.ua'
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -249,3 +247,4 @@ LOGGING = {
 
 FILE_UPLOAD_HANDLERS = ["django.core.files.uploadhandler.MemoryFileUploadHandler",
                         "django.core.files.uploadhandler.TemporaryFileUploadHandler"]
+
