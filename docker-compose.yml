@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: landing-wagtail-app
-    command: sh runserver-dev.sh
+    command: sh runserver.sh
     volumes:
       - .:/app
     expose:
