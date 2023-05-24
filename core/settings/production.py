@@ -1,7 +1,12 @@
 from .base import *
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-DEBUG = True
+
+# load_dotenv()
+
+DEBUG = False
+print('DEBUG: ', DEBUG)
+
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases

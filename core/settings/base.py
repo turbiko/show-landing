@@ -24,7 +24,7 @@ try:
     load_dotenv()
     SECRET_KEY = os.getenv('SECRET_KEY')
     if SECRET_KEY == None or SECRET_KEY == '':
-        SECRET_KEY = 'er%gjfgb;gklbnLIUG34tgfbgjfhj66yhgggfghfg%fhgfdfgd$#^%3453$%^#$%356%^$%REFGthgn'
+        SECRET_KEY = 'er%gjfgb;gklbnLIUG34tgfbgjffgb;gklbngfghfg%fhgfdfgd$#^%3453$%^#$%356%^$%REFGthgn'
 except KeyError:
     print('ERROR: The SECRET_KEY environment variable is not set.')
     SECRET_KEY = 'er%gjfgb;gklbnLIUG34tgfbgjfhj66yhgggfghfghfhgfdfgd$#^%3453$%^#$%356%^$%REFGthgn'
