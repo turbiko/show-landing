@@ -191,7 +191,6 @@ WAGTAILIMAGES_MAX_UPLOAD_SIZE = 15 * 1024 * 1024 * 1024  # first digit size in G
 WAGTAILDOCS_SERVE_METHOD = 'redirect'  # need security check for pages  is_authentificated
 
 CORS_ALLOWED_ORIGINS =[
-    'https://mavka.argentum.ua',
     'https://show.mavka.ua',
 ]
 
