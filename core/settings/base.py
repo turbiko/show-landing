@@ -195,11 +195,11 @@ CORS_ALLOWED_ORIGINS =[
     'https://show.mavka.ua',
 ]
 
-WAGTAILADMIN_BASE_URL = "http://mavka.argentum.ua"
+WAGTAILADMIN_BASE_URL = 'https://show.mavka.ua'
 
-CSRF_TRUSTED_ORIGINS = [ 'https://mavka.argentum.ua', ]
+CSRF_TRUSTED_ORIGINS = [ 'https://show.mavka.ua', ]
 
-# CSRF_COOKIE_DOMAIN = 'https://mavka.argentum.ua'
+# CSRF_COOKIE_DOMAIN = 'https://show.mavka.ua'
 
 CORS_ORIGIN_ALLOW_ALL = True
 
