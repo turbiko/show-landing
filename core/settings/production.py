@@ -19,7 +19,12 @@ DATABASES = {
 }
 
 # SECURITY WARNING: define the correct hosts for production!
-ALLOWED_HOSTS = ["127.0.0.1", "mavka.argentum.ua", "show.mavka.ua"]
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "10.1.100.173",
+    "mavka.argentum.ua",
+    "show.mavka.ua",
+]
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
